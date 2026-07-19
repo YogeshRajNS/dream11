@@ -531,7 +531,7 @@ elif st.session_state.step == 6:
             with tab:
                 team = teams[idx]
                 sel1, sel2 = team['sel1'], team['sel2']
-                # sel1 = batPool selection, sel2 = bowlPool selection
+                # sel1 = batPool selection, sel2 = bowlPool selection test
                 if bat_first == 'A':
                     team_a_players, team_b_players = sel1, sel2
                     a_is_batting = True
