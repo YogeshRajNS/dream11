@@ -563,7 +563,7 @@ elif st.session_state.step == 6:
                 render_team_panel(col_a, team_a_players, 'Team A', 'a', a_is_batting)
                 render_team_panel(col_b, team_b_players, 'Team B', 'b', not a_is_batting)
 
-                # composition summary
+                # composition summaries
                 counts = {r: sum(1 for p in team['combined'] if p['role'] == r) for r in ROLES}
                 chips = "".join(
                     f'<span class="d11-chip" style="background:{ROLE_COLORS[r]}22;color:{ROLE_COLORS[r]};">{r}: {counts[r]}</span>'
@@ -577,7 +577,7 @@ elif st.session_state.step == 6:
                     f'</div>', unsafe_allow_html=True
                 )
 
-                # diff vs previous team
+                # diff vs previous teams
                 if idx > 0:
                     prev = teams[idx - 1]
                     prev_names = {p['name'] for p in prev['combined']}
